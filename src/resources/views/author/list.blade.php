@@ -16,7 +16,7 @@
  <td>{{ $author->id }}</td>
  <td>{{ $author->name }}</td>
  <td><a href="/authors/update/{{ $author->id }}" class="btn btn-outline-primary btnsm">Edit</a>
- / <form action="/authors/delete/{{ $author->id }}" method="post" class="deletionform d-inline">
+ / <form action="/authors/delete/{{ $author->id }}" method="post" onsubmit="return confirm('Are you sure you want to delete this object?');" class="deletionform d-inline">
  @csrf
  <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
 </form>
