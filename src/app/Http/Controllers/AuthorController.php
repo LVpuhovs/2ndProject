@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 class AuthorController extends Controller
 {
     // display all authors
+
+
  public function list()
  {
  $items = Author::orderBy('name', 'asc')->get();

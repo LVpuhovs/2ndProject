@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+
+
     public function list()
 {
  $items = Book::orderBy('name', 'asc')->get();
