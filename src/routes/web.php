@@ -3,7 +3,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DataController;
+use App\Http\Controllers\RegisterController;
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/store', [AuthController::class, 'store']);
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/auth', [AuthController::class, 'authenticate']);
 Route::get('/logout', [AuthController::class, 'logout']);
