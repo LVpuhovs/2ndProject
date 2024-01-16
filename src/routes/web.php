@@ -3,6 +3,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DataController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +39,10 @@ Route::post('/books/put', [BookController::class, 'put']);
 Route::get('/books/update/{book}', [BookController::class, 'update']);
 Route::post('/books/patch/{book}', [BookController::class, 'patch']);
 Route::post('/books/delete/{book}', [BookController::class, 'delete']);
+
+Route::prefix('data')->group(function () {
+    Route::get('/get-top-books', [DataController::class, 'getTopBooks']);
+    Route::get('/get-book/{book}', [DataController::class, 'getBook']);
+    Route::get('/get-relatedbooks/{book}', [DataController::class, 'getRelatedBooks']);
+   });
+   

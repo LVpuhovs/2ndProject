@@ -49,6 +49,7 @@ public function attributes()
  return [
  'name' => 'nosaukums',
  'author_id' => 'autors',
+ 'genre_id' => 'žanrs'
  'description' => 'apraksts',
  'price' => 'cena',
  'year' => 'gads',

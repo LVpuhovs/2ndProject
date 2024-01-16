@@ -35,7 +35,7 @@
                 @foreach($authors as $author)
                     <option
                         value="{{ $author->id }}"
-                        @if ($author->id == old('author_id', $book->author-id ?? false)) selected @endif
+                        @if ($author->id == old('author_id', $book->author_id ?? false)) selected @endif
  >{{ $author->name }}</option>
  @endforeach
  </select>
@@ -43,7 +43,17 @@
  <p class="invalid-feedback">{{ $errors->first('author_id') }}</p>
  @enderror
  </div>
-
+ <div class="mb-3">
+ <label for="genre" class="form-label">Genre</label>
+ <textarea
+ id="book-genre"
+ name="genre_id"
+ class="form-control @error('genre_id') is-invalid @enderror"
+ >{{ old('genre', $book->genre) }}</textarea>
+ @error('description')
+ <p class="invalid-feedback">{{ $errors->first('genre') }}</p>
+ @enderror
+ </div>
 
  <div class="mb-3">
  <label for="book-description" class="form-label">Description</label>

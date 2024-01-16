@@ -15,7 +15,7 @@ class HomeController extends Controller
 {
  return view(
  'home.index',
- ['title' => 'Sākumlapa']
+ ['title' => 's22_puhovs_m']
  );
 }
 }

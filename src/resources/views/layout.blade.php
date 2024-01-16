@@ -2,7 +2,10 @@
 <html lang="lv">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>Project 2 - {{ $title }}</title>
+    <img src="{{ asset('loading.gif') }}" alt="Loading..." id="loading-indicator" style="display: none;">
     <meta name="description" content="Tīmekļa Tehnoloģiju 2. praktiskais darbs">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
