@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Author;
+use App\Models\Genre;
 use App\Http\Requests\BookRequest;
 use Illuminate\Http\Request;
 
@@ -28,12 +29,14 @@ class BookController extends Controller
 public function create()
 {
  $authors = Author::orderBy('name', 'asc')->get();
+ $genres = Genre::orderBy('name', 'asc')->get();
  return view(
  'book.form',
  [
  'title' => 'Add book',
  'book' => new Book(),
  'authors' => $authors,
+ 'genres' => $genres,
  ]
  );
 }
@@ -66,13 +69,15 @@ public function put(BookRequest $request)
 
 public function update(Book $book)
 {
- $authors = Author::orderBy('name', 'asc')->get();
+ $authors = Author::orderBy('name', 'asc')->get(); 
+ $genres = Genre::orderBy('name', 'asc')->get();
  return view(
  'book.form',
  [
  'title' => 'Edit book',
  'book' => $book,
  'authors' => $authors,
+ 'genres' => $genres,
  ]
  );
 }

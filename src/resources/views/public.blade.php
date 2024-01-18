@@ -24,9 +24,10 @@ crossorigin="anonymous"
  </main>
  <footer class="mt-5 py-5">
  <div class="container">
- K. Immers, VeA, 2024
+ M.Puhovs, VeA, 2024
  </div>
  </footer>
- <script src="{{ asset('/js/app.js') }}"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></script>
+ <script src="{{ asset('/app.js') }}"></script>
  </body>
 </html>
