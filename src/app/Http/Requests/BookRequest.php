@@ -24,12 +24,13 @@ class BookRequest extends FormRequest
         return [
             'name' => 'required|min:3|max:256',
             'author_id' => 'required',
-            'genre_id' => 'required|integer',
+            'genre_id' => 'integer',
             'description' => 'nullable',
             'price' => 'nullable|numeric',
             'year' => 'numeric',
             'image' => 'nullable|image',
-            'display' => 'nullable'
+            'display' => 'nullable',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ];
     }
 

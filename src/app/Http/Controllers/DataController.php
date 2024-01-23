@@ -14,7 +14,9 @@ class DataController extends Controller
             ->inRandomOrder()
             ->take(3)
             ->get();
-
+        
+        //var_dump($books);
+        //exit();
         return $books;
     }
 
@@ -25,7 +27,7 @@ class DataController extends Controller
             'id' => $book->id,
             'display' => true,
         ])->firstOrFail();
-
+        //dd($books);    
         return $selectedBook;
     }
 
@@ -37,7 +39,7 @@ class DataController extends Controller
             ->inRandomOrder()
             ->take(3)
             ->get();
-
+        //dd($books);
         return $books;
     }
 }

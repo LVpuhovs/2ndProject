@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
  <h1>{{ $title }}</h1>
+ <a href="/authors/create" class="btn btn-primary">Add new author</a>
  @if (count($items) > 0)
  <table class="table table-striped table-hover table-sm">
  <thead class="thead-light">
@@ -27,7 +28,7 @@
  </table>
  
  @else
- <a href="/authors/create" class="btn btn-primary">Izveidot jaunu</a>
+ 
  <p>No entries found in database</p>
  @endif
 @endsection

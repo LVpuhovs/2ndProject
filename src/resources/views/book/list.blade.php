@@ -33,6 +33,7 @@
             <form
                 method="post"
                 action="/books/delete/{{ $book->id }}"
+                
                 class="d-inline deletion-form"
             >
                 @csrf

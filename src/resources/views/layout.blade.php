@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>Project 2 - {{ $title }}</title>
-    <img src="{{ asset('loading.gif') }}" alt="Loading..." id="loading-indicator" style="display: none;">
+    <img src="/loading.gif" alt="Loading..." id="loading-indicator" style="display: none;">
     <meta name="description" content="Tīmekļa Tehnoloģiju 2. praktiskais darbs">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
@@ -37,6 +36,9 @@
             @if(Auth::check())
                     <li class="nav-item">
                         <a class="nav-link" href="/authors">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/genres">Genres</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/books">Books</a>
@@ -73,13 +75,13 @@
             <div class="row py-5">
                 <div class="col">
 
-                    M.Puhovs, 2023
+                    M.Puhovs, 2024
                 </div>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></script>
-<script src="/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-eedCIJXK9lFOE4HzfuN+Lxk+YoCWYp25BZRdDhGg6mdfcWlr50C5FaQ1P00NZAsj" crossorigin="anonymous"></script>
+    <script src="./js/admin.js"></script>
 </body>
 
 </html>

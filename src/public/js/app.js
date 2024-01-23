@@ -23,7 +23,7 @@ function setupIndex() {
     placeLoader();
 
     // load JSON data
-    fetch('http://localhost/data/get-top-books')
+    newFunction()
         .then(
             response => response.json()
         )
@@ -37,6 +37,10 @@ function setupIndex() {
             setupLinks();
         })
     ;
+
+    function newFunction() {
+        return fetch('http://localhost/data/get-top-books');
+    }
 }
 
 // setup single book page

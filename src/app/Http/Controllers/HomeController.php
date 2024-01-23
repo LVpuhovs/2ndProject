@@ -11,11 +11,7 @@ class HomeController extends Controller
      $this->middleware('auth');
     }
     
-    public function index()
-{
- return view(
- 'home.index',
- ['title' => 's22_puhovs_m']
- );
-}
+    public function index(){
+        return view('public', ['title' => 's22_puhomark']);
+    }
 }

@@ -108,11 +108,7 @@
  <div class="mb-3">
  <label for="book-image" class="form-label">Image</label>
  @if ($book->image)
- <img
- src="{{ asset('images/' . $book->image) }}"
- class="img-fluid img-thumbnail d-block mb-2"
- alt="{{ $book->name }}"
- >
+ <img src="{{ asset('images/' . $book->image) }}" class="img-fluid img-thumbnail d-block mb-2" alt="{{ $book->name }}">
  @endif
  <input
  type="file" accept="image/png, image/webp, image/jpeg"
@@ -146,5 +142,6 @@
  <button type="submit" class="btn btn-primary">
  {{ $book->exists ? 'Update' : 'Create' }}
  </button>
+ <img src="{{ asset('storage/uploads/' . $book->image) }}" alt="{{ $book->name }}">
 </form>
 @endsection

@@ -12,11 +12,15 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-
+    public function __construct()
+    {
+     $this->middleware('auth');
+    }
 
     public function list()
 {
  $items = Book::orderBy('name', 'asc')->get();
+ 
  return view(
  'book.list',
  [
@@ -46,15 +50,12 @@ private function saveBookData(Book $book, BookRequest $request)
     $validatedData = $request->validated();
     $book->fill($validatedData);
     $book->display = (bool) ($validatedData['display'] ?? false);
+
     if ($request->hasFile('image')) {
     $uploadedFile = $request->file('image');
     $extension = $uploadedFile->clientExtension();
     $name = uniqid();
-    $book->image = $uploadedFile->storePubliclyAs(
-    '/',
-    $name . '.' . $extension,
-    'uploads'
-    );
+    $book->image = $uploadedFile->storePubliclyAs('/', $name . '.' . $extension, 'uploads');
     }
     $book->save();
 }
