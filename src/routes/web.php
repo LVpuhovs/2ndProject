@@ -46,6 +46,7 @@ Route::post('/authors/delete/{author}', [AuthorController::class, 'delete']);
 
 // Book routes
 Route::get('/books', [BookController::class, 'list']);
+Route::get('/books/index', [BookController::class, 'index']);
 Route::get('/books/create', [BookController::class, 'create']);
 Route::post('/books/put', [BookController::class, 'put']);
 Route::get('/books/update/{book}', [BookController::class, 'update']);

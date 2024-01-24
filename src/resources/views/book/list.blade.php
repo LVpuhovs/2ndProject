@@ -9,6 +9,8 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Author</th>
+                <th>Genre ID</th>
+                <th>Genre</th>
                 <th>Year</th>
                 <th>Price</th>
                 <th>Published</th>
@@ -22,6 +24,8 @@
         <td>{{ $book->id }}</td>
         <td>{{ $book->name }}</td>
         <td>{{ $book->author->name }}</td>
+        <td>{{ $book->genre_id }}</td>
+        <td>{{ $book->genre ? $book->genre->name : 'No Genre' }}</td>
         <td>{{ $book->year }}</td>
         <td>&euro; {{ number_format($book->price, 2, '.') }}</td>
         <td>{!! $book->display ? '&#x2714;' : '&#x274C;' !!}</td>

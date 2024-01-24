@@ -29,6 +29,12 @@ class BookController extends Controller
  ]
  );
 }
+public function index()
+    {
+        $books = Book::with('genre')->get();
+
+        return view('books.index', ['books' => $books]);
+    }
 
 public function create()
 {
